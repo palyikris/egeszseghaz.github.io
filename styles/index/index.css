@@ -58,6 +58,7 @@ body {
   text-decoration: none;
   border: none;
   background-color: transparent;
+  outline: none;
 }
 
 .topnav button:hover {
