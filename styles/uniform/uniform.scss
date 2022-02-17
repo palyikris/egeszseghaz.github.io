@@ -1,0 +1,15 @@
+@mixin centerDiv($direction, $wrap) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin bgPic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

@@ -1,0 +1,589 @@
+@import "../uniform/uniform";
+
+// ! -------------------------------------------------
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #03001c;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+// ! -------------------------------------------------
+
+
+// .picDiv{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: relative;
+//     width: 100%;
+//     z-index: 10;
+//     position: absolute;
+//     z-index: 8;
+//     background-color: #654545;
+//     // background-position: center;
+//     // background-repeat: no-repeat;
+//     // background-size: cover;
+//     height: 100vh;
+//     flex-direction: column;
+//     .title{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 100%;
+//         font-size: 8vh;
+//         text-transform: uppercase;
+//         p{
+//             color: white;
+//             font-weight: bold;
+//             text-align: center;
+//         }
+//     }
+//     .text{
+//         margin-top: 7vmin;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         width: 100%;
+//         font-size: 4vh;
+//         p{
+//             color: white;
+//             font-weight: 400;
+//             text-align: center;
+//         }
+//     }
+// }
+
+.topnav{
+    @include centerDiv(row, nowrap);
+    justify-content: flex-start;
+    padding: 0 8vmin;
+    position: absolute;
+    z-index: 20;
+    button{
+        @include centerDiv(column, nowrap);
+        width: auto;
+        padding: 3vmin 5vmin;
+        text-decoration: none;
+        border: none;
+        background-color: transparent;
+        &:hover{
+            cursor: pointer;
+        }
+        &:active{
+            outline: none;
+        }
+        p{
+            color: white;
+            font-size: 2.5vh;
+            font-weight: bold;
+        }
+        span{
+            transition: all 0.5s;
+            background-color:  white;
+            width: 0%;
+            height: 2px;
+            margin-top: 1vmin;
+        }
+    }
+}
+
+// ! -------------------------------------------------
+
+.mainContent{
+    @include centerDiv(row, nowrap);
+    overflow: hidden;
+    // todo ----------------------------------------------------
+    .first{
+        margin-top: 15vmin;
+        @include centerDiv(row, wrap);
+        overflow: hidden;
+        height: 100%;
+        top: 0;
+        .firstText{
+            @include centerDiv(column, nowrap);
+            width: 50%;
+            align-items: flex-start;
+            padding-left: 20vmin;
+            .title{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 8vh;
+                    width: 20vmin;
+                }
+            }
+            .text{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    margin-top: 8vmin;
+                    width: 80vmin;
+                    text-align: left;
+                }
+            }
+            .button{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                margin-top: 5vmin;
+                button{
+                    text-decoration: none;
+                    color: white;
+                    background-color: #83ff00;
+                    @include centerDiv(row, nowrap);
+                    width: auto;
+                    border-radius: 10px;
+                    border: none;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:active{
+                        outline: none;
+                    }
+                    p{
+                        padding: 2vmin 5vmin 2vmin 2vmin; 
+                        font-weight: bold;
+                        font-size: 2.5vh;
+                    }
+                    &::after{
+                        content: ">>";
+                        padding: 2vmin 2vmin;
+                        background-color: white;
+                        border-radius: 10px;
+                        color: #83ff00;
+                        font-weight: bold;
+                        font-size: 3vh;
+                    }
+                }
+            }
+        }
+        #wave1{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-40deg);
+            right: 0vmin;
+            margin-left: 40vmin;
+            top: 60vmin;
+        }
+        #wave2{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-50deg);
+            right: 100vmin;
+        }
+        #wave3{
+            position: absolute;
+            z-index: -2;
+            transform: skewY(50deg);
+            left: 50vmin;
+        }
+        .secondText{
+            @include centerDiv(row, nowrap);
+            width: 50%;
+            img{
+                width: 60vmin;
+            }
+        }
+    }
+
+    // todo ----------------------------------------------------
+
+    .second{
+            margin-top: 15vmin;
+        @include centerDiv(row, wrap);
+        overflow: hidden;
+        height: 100%;
+        top: 0;
+        display: none;
+        .firstText{
+            @include centerDiv(column, nowrap);
+            width: 50%;
+            align-items: flex-start;
+            padding-left: 20vmin;
+            .title{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 8vh;
+                    width: 20vmin;
+                }
+            }
+            .text{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    margin-top: 8vmin;
+                    width: 80vmin;
+                    text-align: left;
+                }
+            }
+            .button{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                margin-top: 5vmin;
+                button{
+                    text-decoration: none;
+                    color: white;
+                    background-color: #83ff00;
+                    @include centerDiv(row, nowrap);
+                    width: auto;
+                    border-radius: 10px;
+                    border: none;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:active{
+                        outline: none;
+                    }
+                    p{
+                        padding: 2vmin 5vmin 2vmin 2vmin; 
+                        font-weight: bold;
+                        font-size: 2.5vh;
+                    }
+                    &::after{
+                        content: ">>";
+                        padding: 2vmin 2vmin;
+                        background-color: white;
+                        border-radius: 10px;
+                        color: #83ff00;
+                        font-weight: bold;
+                        font-size: 3vh;
+                    }
+                }
+            }
+        }
+        #wave1{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-40deg);
+            right: 0vmin;
+            margin-left: 40vmin;
+            top: 60vmin;
+        }
+        #wave2{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-50deg);
+            right: 100vmin;
+        }
+        #wave3{
+            position: absolute;
+            z-index: -2;
+            transform: skewY(50deg);
+            left: 50vmin;
+        }
+        .secondText{
+            @include centerDiv(row, nowrap);
+            width: 50%;
+            img{
+                width: 60vmin;
+            }
+        }
+    }
+
+    // todo --------------------------------------------------------------
+
+    .third{
+        margin-top: 15vmin;
+        @include centerDiv(row, wrap);
+        overflow: hidden;
+        height: 100%;
+        top: 0;
+        display: none;
+        .firstText{
+            @include centerDiv(column, nowrap);
+            width: 50%;
+            align-items: flex-start;
+            padding-left: 20vmin;
+            .title{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 8vh;
+                    width: 20vmin;
+                }
+            }
+            .text{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    margin-top: 8vmin;
+                    width: 80vmin;
+                    text-align: left;
+                }
+            }
+            .button{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                margin-top: 5vmin;
+                button{
+                    text-decoration: none;
+                    color: white;
+                    background-color: #83ff00;
+                    @include centerDiv(row, nowrap);
+                    width: auto;
+                    border-radius: 10px;
+                    border: none;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:active{
+                        outline: none;
+                    }
+                    p{
+                        padding: 2vmin 5vmin 2vmin 2vmin; 
+                        font-weight: bold;
+                        font-size: 2.5vh;
+                    }
+                    &::after{
+                        content: ">>";
+                        padding: 2vmin 2vmin;
+                        background-color: white;
+                        border-radius: 10px;
+                        color: #83ff00;
+                        font-weight: bold;
+                        font-size: 3vh;
+                    }
+                }
+            }
+        }
+        #wave1{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-40deg);
+            right: 0vmin;
+            margin-left: 40vmin;
+            top: 60vmin;
+        }
+        #wave2{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-50deg);
+            right: 100vmin;
+        }
+        #wave3{
+            position: absolute;
+            z-index: -2;
+            transform: skewY(50deg);
+            left: 50vmin;
+        }
+        .secondText{
+            @include centerDiv(row, nowrap);
+            width: 50%;
+            img{
+                width: 60vmin;
+            }
+        }
+    }
+
+    // todo----------------------------------------------------------------
+
+    .fourth{
+        margin-top: 15vmin;
+        @include centerDiv(row, wrap);
+        overflow: hidden;
+        height: 100%;
+        top: 0;
+        display: none;
+        .firstText{
+            @include centerDiv(column, nowrap);
+            width: 50%;
+            align-items: flex-start;
+            padding-left: 20vmin;
+            .title{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 8vh;
+                    width: 20vmin;
+                }
+            }
+            .text{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    margin-top: 8vmin;
+                    width: 80vmin;
+                    text-align: left;
+                }
+            }
+            .button{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                margin-top: 5vmin;
+                button{
+                    text-decoration: none;
+                    color: white;
+                    background-color: #83ff00;
+                    @include centerDiv(row, nowrap);
+                    width: auto;
+                    border-radius: 10px;
+                    border: none;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:active{
+                        outline: none;
+                    }
+                    p{
+                        padding: 2vmin 5vmin 2vmin 2vmin; 
+                        font-weight: bold;
+                        font-size: 2.5vh;
+                    }
+                    &::after{
+                        content: ">>";
+                        padding: 2vmin 2vmin;
+                        background-color: white;
+                        border-radius: 10px;
+                        color: #83ff00;
+                        font-weight: bold;
+                        font-size: 3vh;
+                    }
+                }
+            }
+        }
+        #wave1{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-40deg);
+            right: 0vmin;
+            margin-left: 40vmin;
+            top: 60vmin;
+        }
+        #wave2{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-50deg);
+            right: 100vmin;
+        }
+        #wave3{
+            position: absolute;
+            z-index: -2;
+            transform: skewY(50deg);
+            left: 50vmin;
+        }
+        .secondText{
+            @include centerDiv(row, nowrap);
+            width: 50%;
+            img{
+                width: 60vmin;
+            }
+        }
+    }
+
+    // todo ------------------------------------------------------------------------------------
+
+    .fifth{
+        margin-top: 15vmin;
+        @include centerDiv(row, wrap);
+        overflow: hidden;
+        height: 100%;
+        top: 0;
+        display: none;
+        .firstText{
+            @include centerDiv(column, nowrap);
+            width: 50%;
+            align-items: flex-start;
+            padding-left: 20vmin;
+            .title{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    font-weight: bold;
+                    font-size: 8vh;
+                    width: 20vmin;
+                }
+            }
+            .text{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                p{
+                    color: white;
+                    margin-top: 8vmin;
+                    width: 80vmin;
+                    text-align: left;
+                }
+            }
+            .button{
+                @include centerDiv(row, nowrap);
+                justify-content: flex-start;
+                margin-top: 5vmin;
+                button{
+                    text-decoration: none;
+                    color: white;
+                    background-color: #83ff00;
+                    @include centerDiv(row, nowrap);
+                    width: auto;
+                    border-radius: 10px;
+                    border: none;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    &:active{
+                        outline: none;
+                    }
+                    p{
+                        padding: 2vmin 5vmin 2vmin 2vmin; 
+                        font-weight: bold;
+                        font-size: 2.5vh;
+                    }
+                    &::after{
+                        content: ">>";
+                        padding: 2vmin 2vmin;
+                        background-color: white;
+                        border-radius: 10px;
+                        color: #83ff00;
+                        font-weight: bold;
+                        font-size: 3vh;
+                    }
+                }
+            }
+        }
+        #wave1{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-40deg);
+            right: 0vmin;
+            margin-left: 40vmin;
+            top: 60vmin;
+        }
+        #wave2{
+            position: absolute;
+            z-index: -1;
+            transform: skewY(-50deg);
+            right: 100vmin;
+        }
+        #wave3{
+            position: absolute;
+            z-index: -2;
+            transform: skewY(50deg);
+            left: 50vmin;
+        }
+        .secondText{
+            @include centerDiv(row, nowrap);
+            width: 50%;
+            img{
+                width: 60vmin;
+            }
+        }
+    }
+}
