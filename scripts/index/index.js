@@ -128,3 +128,15 @@ function toFirstPage(){
     document.getElementById("topnavSpan").style.width = "100%"
 }
 
+// ! ------------------------------------------------
+
+let navicon = document.querySelector(".topnavOpener i");
+
+navicon.addEventListener("click", () => {
+    if (document.querySelector(".topnav").style.display == "none") {
+        document.querySelector(".topnav").style.display = "flex"
+    }
+    else{
+        document.querySelector(".topnav").style.display = "none"
+    }
+})
