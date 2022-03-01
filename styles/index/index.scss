@@ -237,6 +237,7 @@ body {
         @include centerDiv(row, nowrap);
         justify-content: space-evenly;
         width: 150vmin;
+        max-width: 90%;
         margin: 12vmin 0;
         padding: 5vmin 3vmin;
         p {
@@ -404,6 +405,18 @@ body {
                 }
             }
         }
+    }
+    footer{
+      flex-direction: column;
+      .text, .triangle{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .triangle{
+        padding: 15vmin 5vmin;
+        clip-path: polygon(100% 50%, 50% 0%, 0% 50%, 50% 100%);
+      }
     }
   }
 }

@@ -524,6 +524,7 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 150vmin;
+  max-width: 90%;
   margin: 12vmin 0;
   padding: 5vmin 3vmin;
 }
@@ -767,6 +768,22 @@ body {
   .mainContent .thirdElement .images .third .img {
     width: 50vmin;
     height: 30vmin;
+  }
+  .mainContent footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mainContent footer .text, .mainContent footer .triangle {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .mainContent footer .triangle {
+    padding: 15vmin 5vmin;
+    -webkit-clip-path: polygon(100% 50%, 50% 0%, 0% 50%, 50% 100%);
+            clip-path: polygon(100% 50%, 50% 0%, 0% 50%, 50% 100%);
   }
 }
 /*# sourceMappingURL=index.css.map */
