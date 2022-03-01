@@ -694,7 +694,6 @@ body {
   }
   .mainContent .firstElement .text .content::after {
     padding: 70vmin 50vmin;
-    margin-top: 30vmin;
   }
   .mainContent .firstElement .text .content p {
     width: 90%;
@@ -774,6 +773,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-top: 20vmin;
   }
   .mainContent footer .text, .mainContent footer .triangle {
     margin: 0;

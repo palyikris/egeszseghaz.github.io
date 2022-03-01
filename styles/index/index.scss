@@ -334,7 +334,6 @@ body {
           width: 100%;
           &::after {
             padding: 70vmin 50vmin;
-            margin-top: 30vmin;
           }
           p {
             width: 90%;
@@ -408,6 +407,7 @@ body {
     }
     footer{
       flex-direction: column;
+      margin-top: 20vmin;
       .text, .triangle{
         margin: 0;
         padding: 0;
